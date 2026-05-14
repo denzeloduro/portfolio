@@ -1,0 +1,605 @@
+[
+  {
+    "id": "profiles",
+    "label": "Profiles",
+    "category": "Accounts Center",
+    "parent": null,
+    "path": "Accounts Center > Profiles",
+    "description": "View and manage all profiles connected to your Accounts Center, including Facebook, Instagram, Threads, and Meta accounts.",
+    "keywords": ["profiles", "connected profiles", "accounts", "facebook profile", "instagram profile", "threads profile", "meta profile", "switch profile", "manage profiles"]
+  },
+  {
+    "id": "connected_experiences",
+    "label": "Connected experiences",
+    "category": "Accounts Center",
+    "parent": null,
+    "path": "Accounts Center > Connected experiences",
+    "description": "Manage features that work across your connected accounts, such as cross-posting, profile syncing, and shared shopping activity.",
+    "keywords": ["connected experiences", "cross-app", "linked accounts", "sharing across apps", "connected features"]
+  },
+  {
+    "id": "ce_sharing_posts_stories_reels",
+    "label": "Sharing posts, stories or reels",
+    "category": "Connected experiences",
+    "parent": "connected_experiences",
+    "path": "Accounts Center > Connected experiences > Sharing posts, stories or reels",
+    "description": "Share posts, stories or reels across your Instagram and Facebook accounts, and from Instagram/Facebook to Threads.",
+    "keywords": ["share posts", "share stories", "share reels", "cross-post", "post to facebook", "post to instagram", "share to threads", "story sharing", "reel sharing", "cross-posting"]
+  },
+  {
+    "id": "ce_whatsapp_status_sharing",
+    "label": "Share WhatsApp Status to Stories",
+    "category": "Connected experiences",
+    "parent": "connected_experiences",
+    "path": "Accounts Center > Connected experiences > Share WhatsApp Status to Stories",
+    "description": "Automatically share your WhatsApp Status to your Facebook or Instagram Stories.",
+    "keywords": ["whatsapp status", "share status", "status to stories", "whatsapp stories", "whatsapp sharing"]
+  },
+  {
+    "id": "ce_sync_profile_picture",
+    "label": "Syncing your profile picture",
+    "category": "Connected experiences",
+    "parent": "connected_experiences",
+    "path": "Accounts Center > Connected experiences > Syncing your profile picture",
+    "description": "Sync your profile picture across Facebook, Instagram, Meta Horizon, and Threads profiles.",
+    "keywords": ["sync profile picture", "profile photo sync", "same profile picture", "profile picture across apps", "sync photo", "profile pic"]
+  },
+  {
+    "id": "ce_manage_avatars",
+    "label": "Manage avatars",
+    "category": "Connected experiences",
+    "parent": "connected_experiences",
+    "path": "Accounts Center > Connected experiences > Manage avatars",
+    "description": "View all your avatars in one place and assign the same avatar across multiple profiles.",
+    "keywords": ["avatars", "manage avatars", "avatar sync", "avatar across profiles", "meta avatar", "facebook avatar"]
+  },
+  {
+    "id": "ce_sync_shopping_activity",
+    "label": "Syncing your shopping activity",
+    "category": "Connected experiences",
+    "parent": "connected_experiences",
+    "path": "Accounts Center > Connected experiences > Syncing your shopping activity",
+    "description": "Sync your shopping activity across Facebook and Instagram, including wishlist and recently viewed items.",
+    "keywords": ["shopping activity", "sync shopping", "wishlist", "recently viewed items", "shopping sync", "facebook shops", "instagram shops", "shop"]
+  },
+  {
+    "id": "ce_facebook_dating_instagram",
+    "label": "Connecting Facebook Dating and Instagram",
+    "category": "Connected experiences",
+    "parent": "connected_experiences",
+    "path": "Accounts Center > Connected experiences > Connecting Facebook Dating and Instagram",
+    "description": "Share Instagram posts on your Dating profile and add Instagram followers as secret crushes.",
+    "keywords": ["facebook dating", "dating", "instagram dating", "secret crushes", "dating profile", "dating instagram"]
+  },
+  {
+    "id": "ce_following_meta_horizon",
+    "label": "Following people on Meta Horizon",
+    "category": "Connected experiences",
+    "parent": "connected_experiences",
+    "path": "Accounts Center > Connected experiences > Following people on Meta Horizon",
+    "description": "Automatically send follow requests to Facebook friends or Instagram follows who have Meta Horizon profiles.",
+    "keywords": ["meta horizon", "horizon following", "follow horizon", "vr friends", "quest friends", "horizon worlds"]
+  },
+  {
+    "id": "ce_showing_profiles_horizon",
+    "label": "Showing your other profiles in Meta Horizon",
+    "category": "Connected experiences",
+    "parent": "connected_experiences",
+    "path": "Accounts Center > Connected experiences > Showing your other profiles in Meta Horizon",
+    "description": "Choose which names or usernames are shown across your profiles in Meta Horizon.",
+    "keywords": ["horizon profiles", "show profiles", "horizon username", "cross-profile visibility", "horizon identity"]
+  },
+  {
+    "id": "ce_meta_cloud_albums",
+    "label": "Meta Cloud Albums",
+    "category": "Connected experiences",
+    "parent": "connected_experiences",
+    "path": "Accounts Center > Connected experiences > Meta Cloud Albums",
+    "description": "View media captured in Meta Horizon Worlds in your Instagram photo galleries through Meta Cloud Albums.",
+    "keywords": ["cloud albums", "meta cloud albums", "horizon media", "horizon photos", "vr photos", "horizon worlds media"]
+  },
+  {
+    "id": "ce_logging_in_with_accounts",
+    "label": "Logging in with accounts",
+    "category": "Connected experiences",
+    "parent": "connected_experiences",
+    "path": "Accounts Center > Connected experiences > Logging in with accounts",
+    "description": "Manage which accounts can log into each other within the same Accounts Center.",
+    "keywords": ["login with accounts", "cross-account login", "log into each other", "single sign-on", "login across accounts", "shared login"]
+  },
+  {
+    "id": "accounts",
+    "label": "Accounts",
+    "category": "Account settings",
+    "parent": null,
+    "path": "Accounts Center > Accounts",
+    "description": "Add or remove Facebook, Instagram, WhatsApp, Threads, and Meta accounts from your Accounts Center.",
+    "keywords": ["accounts", "add account", "remove account", "manage accounts", "linked accounts", "connected accounts"]
+  },
+  {
+    "id": "accounts_add",
+    "label": "Add accounts",
+    "category": "Account settings",
+    "parent": "accounts",
+    "path": "Accounts Center > Accounts > Add accounts",
+    "description": "Add a new Facebook, Instagram, WhatsApp, Threads, or Meta account to your Accounts Center.",
+    "keywords": ["add account", "link account", "connect account", "new account", "add facebook", "add instagram", "add whatsapp", "add threads"]
+  },
+  {
+    "id": "accounts_remove",
+    "label": "Remove accounts",
+    "category": "Account settings",
+    "parent": "accounts",
+    "path": "Accounts Center > Accounts > Remove accounts",
+    "description": "Remove an account from your Accounts Center to manage it separately.",
+    "keywords": ["remove account", "unlink account", "disconnect account", "separate account", "move account out"]
+  },
+  {
+    "id": "personal_details",
+    "label": "Personal details",
+    "category": "Account settings",
+    "parent": null,
+    "path": "Accounts Center > Personal details",
+    "description": "Update your contact information, birthday, manage identity confirmation, memorialization preferences, and delete or deactivate your account or profile.",
+    "keywords": ["personal details", "personal info", "personal information", "profile info", "about me", "my details"]
+  },
+  {
+    "id": "pd_contact_info",
+    "label": "Contact info",
+    "category": "Personal details",
+    "parent": "personal_details",
+    "path": "Accounts Center > Personal details > Contact info",
+    "description": "Manage your email addresses and phone numbers associated with your accounts.",
+    "keywords": ["contact info", "email", "phone number", "email address", "mobile number", "contact information", "change email", "change phone", "add email", "add phone"]
+  },
+  {
+    "id": "pd_birthday",
+    "label": "Birthday",
+    "category": "Personal details",
+    "parent": "personal_details",
+    "path": "Accounts Center > Personal details > Birthday",
+    "description": "View or update your birthday across your connected accounts.",
+    "keywords": ["birthday", "date of birth", "birth date", "age", "change birthday", "update birthday", "dob"]
+  },
+  {
+    "id": "pd_identity_confirmation",
+    "label": "Identity confirmation",
+    "category": "Personal details",
+    "parent": "personal_details",
+    "path": "Accounts Center > Personal details > Identity confirmation",
+    "description": "Confirm your identity with Meta by submitting identification documents.",
+    "keywords": ["identity confirmation", "verify identity", "id verification", "confirm identity", "identity documents", "government id", "photo id", "selfie verification"]
+  },
+  {
+    "id": "pd_memorialization",
+    "label": "Memorialization settings",
+    "category": "Personal details",
+    "parent": "personal_details",
+    "path": "Accounts Center > Personal details > Account ownership and control > Memorialization",
+    "description": "Choose a legacy contact or request account deletion after passing. Manage memorialization preferences for your account.",
+    "keywords": ["memorialization", "legacy contact", "memorial", "after death", "deceased", "remembering", "account after death", "memorialize", "tribute"]
+  },
+  {
+    "id": "pd_account_ownership_control",
+    "label": "Account ownership and control",
+    "category": "Personal details",
+    "parent": "personal_details",
+    "path": "Accounts Center > Personal details > Account ownership and control",
+    "description": "Manage account ownership settings including deactivation, deletion, and memorialization.",
+    "keywords": ["account ownership", "account control", "ownership", "manage account", "account management"]
+  },
+  {
+    "id": "pd_deactivate_account",
+    "label": "Deactivate account",
+    "category": "Personal details",
+    "parent": "personal_details",
+    "path": "Accounts Center > Personal details > Account ownership and control > Deactivation or deletion > Deactivate account",
+    "description": "Temporarily deactivate your Facebook, Instagram, or other Meta account.",
+    "keywords": ["deactivate", "deactivate account", "temporarily disable", "disable account", "pause account", "take a break", "deactivation"]
+  },
+  {
+    "id": "pd_delete_account",
+    "label": "Delete account",
+    "category": "Personal details",
+    "parent": "personal_details",
+    "path": "Accounts Center > Personal details > Account ownership and control > Deactivation or deletion > Delete account",
+    "description": "Permanently delete your Facebook, Instagram, or other Meta account and all associated data.",
+    "keywords": ["delete account", "permanently delete", "remove account", "close account", "delete my account", "account deletion", "erase account"]
+  },
+  {
+    "id": "pd_deactivate_profile",
+    "label": "Deactivate or delete profile",
+    "category": "Personal details",
+    "parent": "personal_details",
+    "path": "Accounts Center > Personal details > Account ownership and control > Deactivation or deletion",
+    "description": "Deactivate or delete individual profiles, including additional Facebook profiles.",
+    "keywords": ["deactivate profile", "delete profile", "remove profile", "disable profile", "additional profile"]
+  },
+  {
+    "id": "password_security",
+    "label": "Password and security",
+    "category": "Account settings",
+    "parent": null,
+    "path": "Accounts Center > Password and security",
+    "description": "Manage your password, two-factor authentication, login alerts, login activity, and where you're logged in.",
+    "keywords": ["password", "security", "password and security", "login security", "account security", "protect account"]
+  },
+  {
+    "id": "ps_change_password",
+    "label": "Change password",
+    "category": "Password and security",
+    "parent": "password_security",
+    "path": "Accounts Center > Password and security > Change password",
+    "description": "Change or update the password for your Facebook, Instagram, or Meta account.",
+    "keywords": ["change password", "update password", "new password", "reset password", "password change", "modify password"]
+  },
+  {
+    "id": "ps_passkeys",
+    "label": "Passkeys",
+    "category": "Password and security",
+    "parent": "password_security",
+    "path": "Accounts Center > Password and security > Passkeys",
+    "description": "Set up passkeys to log in using your fingerprint, face recognition, or device password instead of a traditional password.",
+    "keywords": ["passkeys", "passkey", "fingerprint login", "face recognition login", "biometric login", "passwordless", "face id", "touch id"]
+  },
+  {
+    "id": "ps_two_factor_auth",
+    "label": "Two-factor authentication",
+    "category": "Password and security",
+    "parent": "password_security",
+    "path": "Accounts Center > Password and security > Two-factor authentication",
+    "description": "Add an extra layer of security by requiring a code in addition to your password when logging in.",
+    "keywords": ["two-factor authentication", "2fa", "two factor", "authentication app", "sms code", "security code", "verification code", "authenticator", "multi-factor", "mfa"]
+  },
+  {
+    "id": "ps_login_alerts",
+    "label": "Login alerts",
+    "category": "Password and security",
+    "parent": "password_security",
+    "path": "Accounts Center > Password and security > Login alerts",
+    "description": "Get notified when someone logs into your account from an unrecognized device or browser.",
+    "keywords": ["login alerts", "login notifications", "unrecognized login", "suspicious login", "login warning", "security alert", "login notification"]
+  },
+  {
+    "id": "ps_login_activity",
+    "label": "Where you're logged in",
+    "category": "Password and security",
+    "parent": "password_security",
+    "path": "Accounts Center > Password and security > Where you're logged in",
+    "description": "See all active sessions and devices where your account is currently logged in, and log out remotely.",
+    "keywords": ["where logged in", "active sessions", "logged in devices", "login activity", "active devices", "log out remotely", "session management", "device management", "logged in locations"]
+  },
+  {
+    "id": "ps_security_checkup",
+    "label": "Security checkup",
+    "category": "Password and security",
+    "parent": "password_security",
+    "path": "Accounts Center > Password and security > Security checkup",
+    "description": "Review and improve your account security with personalized recommendations.",
+    "keywords": ["security checkup", "security check", "security review", "account checkup", "security recommendations", "improve security"]
+  },
+  {
+    "id": "ps_saved_login",
+    "label": "Saved login info",
+    "category": "Password and security",
+    "parent": "password_security",
+    "path": "Accounts Center > Password and security > Saved login info",
+    "description": "Manage devices and browsers where your login information is saved for quick access.",
+    "keywords": ["saved login", "saved login info", "remember login", "auto login", "saved credentials", "remember me", "saved password"]
+  },
+  {
+    "id": "ps_emails_from_meta",
+    "label": "Emails from Meta",
+    "category": "Password and security",
+    "parent": "password_security",
+    "path": "Accounts Center > Password and security > Emails from Meta",
+    "description": "View recent security and login emails sent by Meta to verify their authenticity.",
+    "keywords": ["emails from meta", "meta emails", "security emails", "recent emails", "email verification", "legitimate emails", "phishing check"]
+  },
+  {
+    "id": "your_info_permissions",
+    "label": "Your information and permissions",
+    "category": "Account settings",
+    "parent": null,
+    "path": "Accounts Center > Your information and permissions",
+    "description": "Manage how your information is used, upload contacts, manage search history, and download or transfer your data.",
+    "keywords": ["information", "permissions", "your information", "data", "privacy", "information and permissions", "manage data", "my data"]
+  },
+  {
+    "id": "yip_export_info",
+    "label": "Export your information",
+    "category": "Your information and permissions",
+    "parent": "your_info_permissions",
+    "path": "Accounts Center > Your information and permissions > Export your information",
+    "description": "Export a copy of your Facebook or Instagram information to a device or external service.",
+    "keywords": ["export information", "download information", "download data", "export data", "download my data", "data export", "backup data", "save my data", "copy of information"]
+  },
+  {
+    "id": "yip_access_info",
+    "label": "Access your information",
+    "category": "Your information and permissions",
+    "parent": "your_info_permissions",
+    "path": "Accounts Center > Your information and permissions > Access your information",
+    "description": "Access your Activity log, settings, and Privacy Center for each of your profiles.",
+    "keywords": ["access information", "view information", "activity log", "my information", "see my data", "view data", "access data"]
+  },
+  {
+    "id": "yip_transfer_info",
+    "label": "Transfer your information",
+    "category": "Your information and permissions",
+    "parent": "your_info_permissions",
+    "path": "Accounts Center > Your information and permissions > Transfer your information",
+    "description": "Transfer a copy of your information to another service or platform.",
+    "keywords": ["transfer information", "transfer data", "data portability", "move data", "export to service", "data transfer"]
+  },
+  {
+    "id": "yip_manage_info",
+    "label": "Manage your information",
+    "category": "Your information and permissions",
+    "parent": "your_info_permissions",
+    "path": "Accounts Center > Your information and permissions > Manage your information",
+    "description": "Control how long Meta retains your information and manage data retention settings.",
+    "keywords": ["manage information", "data retention", "information management", "how long data kept", "data storage", "manage data"]
+  },
+  {
+    "id": "yip_search_history",
+    "label": "Search history",
+    "category": "Your information and permissions",
+    "parent": "your_info_permissions",
+    "path": "Accounts Center > Your information and permissions > Search history",
+    "description": "Review and manage your search history across Facebook and Instagram.",
+    "keywords": ["search history", "clear search history", "delete searches", "search log", "past searches", "recent searches", "search activity"]
+  },
+  {
+    "id": "yip_upload_contacts",
+    "label": "Upload contacts",
+    "category": "Your information and permissions",
+    "parent": "your_info_permissions",
+    "path": "Accounts Center > Your information and permissions > Upload contacts",
+    "description": "Manage whether your phone contacts are continuously uploaded to help find friends and connections.",
+    "keywords": ["upload contacts", "sync contacts", "phone contacts", "contact list", "find friends", "contact sync", "import contacts", "address book"]
+  },
+  {
+    "id": "yip_activity_off_meta",
+    "label": "Your activity off Meta technologies",
+    "category": "Your information and permissions",
+    "parent": "your_info_permissions",
+    "path": "Accounts Center > Your information and permissions > Your activity off Meta technologies",
+    "description": "View or clear activity data from businesses and organizations you visit outside of Meta apps and websites.",
+    "keywords": ["activity off meta", "off-facebook activity", "off-meta activity", "third party activity", "external activity", "tracking", "off-platform activity", "website tracking", "app tracking"]
+  },
+  {
+    "id": "yip_specific_ad_partners",
+    "label": "Specific ad partners",
+    "category": "Your information and permissions",
+    "parent": "your_info_permissions",
+    "path": "Accounts Center > Your information and permissions > Specific ad partners",
+    "description": "Manage your activity information sent from specific ad partners and linked external accounts.",
+    "keywords": ["ad partners", "specific ad partners", "linked accounts", "external accounts", "partner data", "advertiser data"]
+  },
+  {
+    "id": "yip_manage_cookies",
+    "label": "Manage cookies",
+    "category": "Your information and permissions",
+    "parent": "your_info_permissions",
+    "path": "Accounts Center > Your information and permissions > Manage cookies",
+    "description": "Manage cookies and similar technologies used to personalize content, ads, and improve your experience.",
+    "keywords": ["cookies", "manage cookies", "cookie preferences", "browser cookies", "cookie settings", "tracking cookies", "cookie consent"]
+  },
+  {
+    "id": "ad_preferences",
+    "label": "Ad preferences",
+    "category": "Account settings",
+    "parent": null,
+    "path": "Accounts Center > Ad preferences",
+    "description": "Manage your ad experience including ad topics, interests, profile information used for ads, and recent ad activity.",
+    "keywords": ["ad preferences", "ads", "advertising", "ad settings", "customize ads", "ad experience", "advertisements"]
+  },
+  {
+    "id": "ap_ad_topics",
+    "label": "Ad topics",
+    "category": "Ad preferences",
+    "parent": "ad_preferences",
+    "path": "Accounts Center > Ad preferences > Ad topics",
+    "description": "Choose to see fewer ads about certain topics like alcohol, gambling, parenting, or pets.",
+    "keywords": ["ad topics", "ad topic preferences", "see fewer ads", "alcohol ads", "gambling ads", "parenting ads", "pet ads", "ad categories", "topic preferences"]
+  },
+  {
+    "id": "ap_customize_ads",
+    "label": "Customize ads",
+    "category": "Ad preferences",
+    "parent": "ad_preferences",
+    "path": "Accounts Center > Ad preferences > Customize ads",
+    "description": "Manage how your interests and profile information are used to personalize the ads you see.",
+    "keywords": ["customize ads", "personalized ads", "ad interests", "ad personalization", "targeted ads", "interest-based ads", "ad targeting"]
+  },
+  {
+    "id": "ap_categories_reach_you",
+    "label": "Categories used to reach you",
+    "category": "Ad preferences",
+    "parent": "ad_preferences",
+    "path": "Accounts Center > Ad preferences > Categories used to reach you",
+    "description": "View and manage the categories advertisers use to show you ads based on your profile information.",
+    "keywords": ["categories", "categories used to reach you", "ad categories", "advertiser categories", "demographic targeting", "interest categories"]
+  },
+  {
+    "id": "ap_activity_from_ad_partners",
+    "label": "Activity information from ad partners",
+    "category": "Ad preferences",
+    "parent": "ad_preferences",
+    "path": "Accounts Center > Ad preferences > Activity information from ad partners",
+    "description": "Control whether Meta uses activity information from ad partners to show you personalized ads.",
+    "keywords": ["activity from ad partners", "ad partner activity", "partner data", "third party data for ads", "external data ads", "ad partners information"]
+  },
+  {
+    "id": "ap_audience_based_advertising",
+    "label": "Audience-based advertising",
+    "category": "Ad preferences",
+    "parent": "ad_preferences",
+    "path": "Accounts Center > Ad preferences > Audience-based advertising",
+    "description": "Manage preferences for ads shown to you based on audience lists uploaded by advertisers.",
+    "keywords": ["audience-based advertising", "custom audiences", "audience lists", "advertiser lists", "targeted advertising", "audience targeting"]
+  },
+  {
+    "id": "ap_recent_ad_activity",
+    "label": "Recent ad activity",
+    "category": "Ad preferences",
+    "parent": "ad_preferences",
+    "path": "Accounts Center > Ad preferences > Recent ad activity",
+    "description": "View ads you've recently interacted with across your Facebook and Instagram accounts.",
+    "keywords": ["recent ad activity", "ad history", "ads seen", "recent ads", "ad interactions", "viewed ads"]
+  },
+  {
+    "id": "ap_advertisers_seen",
+    "label": "Advertisers you've seen recently",
+    "category": "Ad preferences",
+    "parent": "ad_preferences",
+    "path": "Accounts Center > Ad preferences > Advertisers you've seen recently",
+    "description": "View a list of advertisers whose ads you've recently seen and manage your preferences.",
+    "keywords": ["advertisers seen", "recent advertisers", "advertisers list", "hide advertiser", "block advertiser", "advertisers you've seen"]
+  },
+  {
+    "id": "ap_ad_settings",
+    "label": "Ad settings",
+    "category": "Ad preferences",
+    "parent": "ad_preferences",
+    "path": "Accounts Center > Ad preferences > Ad settings",
+    "description": "Manage general ad settings including data used for ads and social interactions in ads.",
+    "keywords": ["ad settings", "ads settings", "advertising settings", "ad controls", "ad data", "social ads"]
+  },
+  {
+    "id": "payments",
+    "label": "Payments",
+    "category": "Account settings",
+    "parent": null,
+    "path": "Accounts Center > Payments",
+    "description": "Manage settings for Meta Pay including payment methods and purchase history.",
+    "keywords": ["payments", "meta pay", "payment methods", "pay", "money", "purchase", "billing"]
+  },
+  {
+    "id": "pay_payment_methods",
+    "label": "Payment methods",
+    "category": "Payments",
+    "parent": "payments",
+    "path": "Accounts Center > Payments > Payment methods",
+    "description": "Add, edit, or remove payment methods such as credit cards, debit cards, or PayPal for Meta Pay.",
+    "keywords": ["payment methods", "credit card", "debit card", "paypal", "add payment", "remove payment", "card", "bank", "payment option"]
+  },
+  {
+    "id": "pay_purchase_history",
+    "label": "Purchase history",
+    "category": "Payments",
+    "parent": "payments",
+    "path": "Accounts Center > Payments > Purchase history",
+    "description": "View your purchase history and transaction records across Meta platforms.",
+    "keywords": ["purchase history", "transactions", "order history", "receipts", "payment history", "purchases", "orders"]
+  },
+  {
+    "id": "pay_meta_pay_settings",
+    "label": "Meta Pay settings",
+    "category": "Payments",
+    "parent": "payments",
+    "path": "Accounts Center > Payments > Meta Pay settings",
+    "description": "Manage your Meta Pay preferences and settings for payments across Meta platforms.",
+    "keywords": ["meta pay", "meta pay settings", "facebook pay", "pay settings", "payment preferences"]
+  },
+  {
+    "id": "supervision",
+    "label": "Supervision",
+    "category": "Account settings",
+    "parent": null,
+    "path": "Accounts Center > Supervision",
+    "description": "Manage parental supervision settings through Family Center for teen accounts across Instagram, Facebook, Messenger, and Meta Horizon.",
+    "keywords": ["supervision", "parental controls", "family center", "teen account", "parental supervision", "teen settings", "child safety", "parent controls", "family", "kids"]
+  },
+  {
+    "id": "sup_family_center",
+    "label": "Family Center",
+    "category": "Supervision",
+    "parent": "supervision",
+    "path": "Accounts Center > Supervision > Family Center",
+    "description": "Access Family Center to manage supervision settings, screen time limits, and privacy settings for teen accounts.",
+    "keywords": ["family center", "family", "parental dashboard", "teen dashboard", "supervision dashboard", "family settings"]
+  },
+  {
+    "id": "sup_screen_time",
+    "label": "Screen time",
+    "category": "Supervision",
+    "parent": "supervision",
+    "path": "Accounts Center > Supervision > Screen time",
+    "description": "Set daily time limits and manage screen time for supervised teen accounts.",
+    "keywords": ["screen time", "time limit", "daily limit", "usage limit", "time management", "screen time limit", "app time"]
+  },
+  {
+    "id": "sup_content_restrictions",
+    "label": "Content restrictions",
+    "category": "Supervision",
+    "parent": "supervision",
+    "path": "Accounts Center > Supervision > Content restrictions",
+    "description": "Manage content sensitivity settings and restrictions for supervised teen accounts.",
+    "keywords": ["content restrictions", "restricted content", "sensitive content", "content filter", "age restrictions", "content controls"]
+  },
+  {
+    "id": "meta_verified",
+    "label": "Meta Verified",
+    "category": "Account settings",
+    "parent": null,
+    "path": "Accounts Center > Meta Verified",
+    "description": "Subscribe to Meta Verified for a verified badge, enhanced support, and additional features.",
+    "keywords": ["meta verified", "verified badge", "blue check", "verification", "verified", "checkmark", "blue badge", "identity verification", "enhanced support"]
+  },
+  {
+    "id": "mv_subscription",
+    "label": "Meta Verified subscription",
+    "category": "Meta Verified",
+    "parent": "meta_verified",
+    "path": "Accounts Center > Meta Verified > Subscription",
+    "description": "Manage your Meta Verified subscription, billing, and plan details.",
+    "keywords": ["meta verified subscription", "verified subscription", "subscription plan", "verified billing", "subscribe verified"]
+  },
+  {
+    "id": "mv_enhanced_support",
+    "label": "Enhanced support",
+    "category": "Meta Verified",
+    "parent": "meta_verified",
+    "path": "Accounts Center > Meta Verified > Enhanced support",
+    "description": "Access priority customer support available to Meta Verified subscribers.",
+    "keywords": ["enhanced support", "priority support", "customer support", "help", "verified support", "account support"]
+  },
+  {
+    "id": "subscriptions",
+    "label": "Subscriptions",
+    "category": "Account settings",
+    "parent": null,
+    "path": "Accounts Center > Subscriptions",
+    "description": "Manage your active subscriptions across Meta platforms.",
+    "keywords": ["subscriptions", "subscription", "manage subscriptions", "active subscriptions", "recurring payments", "subscription management"]
+  },
+  {
+    "id": "manage_account",
+    "label": "Manage account",
+    "category": "Account settings",
+    "parent": null,
+    "path": "Accounts Center > Manage account",
+    "description": "General account management options including account recovery and account status.",
+    "keywords": ["manage account", "account management", "account settings", "account options", "account recovery"]
+  },
+  {
+    "id": "cross_profile_experiences",
+    "label": "Cross-profile experiences",
+    "category": "Account settings",
+    "parent": null,
+    "path": "Accounts Center > Cross-profile experiences",
+    "description": "Manage experiences that work across your different profiles and accounts.",
+    "keywords": ["cross-profile", "cross profile experiences", "multi-profile", "profile experiences", "across profiles"]
+  },
+  {
+    "id": "login_security",
+    "label": "Login and security",
+    "category": "Account settings",
+    "parent": null,
+    "path": "Accounts Center > Login and security",
+    "description": "Manage login methods, security settings, and authentication options for your Meta Account.",
+    "keywords": ["login", "login and security", "sign in", "authentication", "login methods", "security settings", "account access"]
+  }
+]
