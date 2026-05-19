@@ -27,14 +27,21 @@ interface ProjectCardProps {
   children?: React.ReactNode;
   /** Hover hint shown over the prototype. Defaults to a swipe-to-delete cue. */
   hint?: ProjectHint;
+  /** When true, suppress the hover tooltip entirely. Use for prototypes
+   *  whose interaction model doesn't fit any prewritten hint. */
+  hideHint?: boolean;
   /** 3D tilt direction. Defaults to `"right"`. */
   tilt?: ProjectTilt;
   /** When provided, the title + context become a navigation link to a case
    *  study page. The interactive prototype above stays separately interactive. */
   href?: string;
+  /** Custom CSS background for the card surface behind the prototype. Accepts
+   *  any valid CSS `background` value (gradient, color, image, etc.). Falls
+   *  back to the global `--card-bg` token when omitted. */
+  background?: string;
 }
 
-export default function ProjectCard({ title, context, aspectRatio = "square", delay = 0, imageSrc, children, hint, tilt, href }: ProjectCardProps) {
+export default function ProjectCard({ title, context, aspectRatio = "square", delay = 0, imageSrc, children, hint, hideHint, tilt, href, background }: ProjectCardProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [glowPos, setGlowPos] = useState({ x: 50, y: 50 });
@@ -68,7 +75,7 @@ export default function ProjectCard({ title, context, aspectRatio = "square", de
       >
         <div
           className="absolute inset-0 transition-all duration-400"
-          style={{ background: "var(--card-bg)" }}
+          style={{ background: background ?? "var(--card-bg)" }}
         />
 
         {imageSrc && (
@@ -80,7 +87,7 @@ export default function ProjectCard({ title, context, aspectRatio = "square", de
         )}
 
         {children && (
-          <PrototypeContainer hint={hint} tilt={tilt}>
+          <PrototypeContainer hint={hint} hideHint={hideHint} tilt={tilt}>
             {children}
           </PrototypeContainer>
         )}
@@ -89,7 +96,7 @@ export default function ProjectCard({ title, context, aspectRatio = "square", de
 
       {href ? (
         <Link href={href} className="group/link inline-block mt-[16px]">
-          <p className="text-[24px] font-medium text-foreground inline-flex items-center gap-[10px] transition-colors duration-300 group-hover/link:text-[#FF6200]">
+          <p className="text-[20px] md:text-[24px] font-medium text-foreground inline-flex items-center gap-[10px] transition-colors duration-300 group-hover/link:text-[#FF6200]">
             {title}
             <span
               aria-hidden="true"
@@ -106,12 +113,12 @@ export default function ProjectCard({ title, context, aspectRatio = "square", de
               </svg>
             </span>
           </p>
-          <p className="text-[24px] text-secondary">{context}</p>
+          <p className="text-[20px] md:text-[24px] text-secondary">{context}</p>
         </Link>
       ) : (
         <>
-          <p className="text-[24px] font-medium text-foreground mt-[16px]">{title}</p>
-          <p className="text-[24px] text-secondary">{context}</p>
+          <p className="text-[20px] md:text-[24px] font-medium text-foreground mt-[16px]">{title}</p>
+          <p className="text-[20px] md:text-[24px] text-secondary">{context}</p>
         </>
       )}
     </motion.div>
@@ -177,10 +184,12 @@ const PHONE_FRAME_DARK = {
 function PrototypeContainer({
   children,
   hint,
+  hideHint,
   tilt = "right",
 }: {
   children: React.ReactNode;
   hint?: ProjectHint;
+  hideHint?: boolean;
   tilt?: ProjectTilt;
 }) {
   const shellRef = useRef<HTMLDivElement>(null);
@@ -197,7 +206,13 @@ function PrototypeContainer({
     const compute = () => {
       if (!shellRef.current) return;
       const parentWidth = shellRef.current.parentElement?.clientWidth ?? 0;
-      const target = Math.min(390, Math.max(375, parentWidth * 0.55));
+      // Phone width = 65% of card width, capped at 390pt (iPhone 14 Pro
+      // design). Critical: NO lower floor. The previous `Math.max(375, …)`
+      // floor meant a 342pt mobile card got a 375pt phone, so the phone
+      // burst out of the card on small screens. Removing it lets the phone
+      // scale gracefully down — at 0.65, a 342pt mobile card gets a ~222pt
+      // phone, leaving ~60pt of breathing room on each side.
+      const target = Math.min(390, parentWidth * 0.65);
       setScale(target / PROTOTYPE_WIDTH);
     };
     compute();
@@ -207,6 +222,12 @@ function PrototypeContainer({
 
   const displayWidth = PROTOTYPE_WIDTH * scale;
   const PHONE_DEPTH = 40;
+  // iPhone-style corner radii scale with phone width. At the 390pt reference
+  // size these resolve to ~43pt (screen) and ~48pt (bezel) — matching what
+  // was previously hardcoded. When the phone scales down on mobile, the radii
+  // shrink proportionally so the corners don't look chunky on a small phone.
+  const SCREEN_RADIUS = displayWidth * (43 / 390);
+  const BEZEL_RADIUS = SCREEN_RADIUS + 5; // bezel adds the 5pt inset back outward
   // `right` tilts the right edge of the phone away from the viewer (default);
   // `left` mirrors it. When two phones sit side-by-side with opposing tilts
   // they lean toward each other like the open spread of a book, which gives
@@ -227,9 +248,11 @@ function PrototypeContainer({
     >
       {/* Hover discovery tooltip — docks to the configured corner of the card,
           flat to the viewport. Slide direction follows the dock so the tooltip
-          always animates inward from its anchor edge. */}
+          always animates inward from its anchor edge. Skipped entirely when
+          `hideHint` is set (e.g. for the Account Recovery prototype where no
+          swipe/tap cue applies). */}
       <AnimatePresence>
-        {isHovered && (
+        {isHovered && !hideHint && (
           <motion.div
             className="absolute z-30 pointer-events-none"
             style={
@@ -292,10 +315,12 @@ function PrototypeContainer({
         >
           {/* Back face — phone's rear shell */}
           <div
-            className="absolute rounded-t-[48px]"
+            className="absolute"
             style={{
               inset: 0,
               background: FRAME.back,
+              borderTopLeftRadius: BEZEL_RADIUS,
+              borderTopRightRadius: BEZEL_RADIUS,
               transform: `translateZ(-${PHONE_DEPTH}px)`,
             }}
           />
@@ -333,10 +358,12 @@ function PrototypeContainer({
               where the side face meets the corner blends instead of showing
               as a black sliver. */}
           <div
-            className="relative rounded-t-[48px] h-full"
+            className="relative h-full"
             style={{
               padding: "5px 5px 0 5px",
               background: FRAME.bezel,
+              borderTopLeftRadius: BEZEL_RADIUS,
+              borderTopRightRadius: BEZEL_RADIUS,
               transform: "translateZ(0.5px)",
             }}
           >
@@ -347,8 +374,8 @@ function PrototypeContainer({
                 height: "100%",
                 // clip-path survives compositing changes (e.g. when dialog's
                 // backdrop-filter forces a GPU layer flip).
-                clipPath: "inset(0 0 0 0 round 43px 43px 0 0)",
-                WebkitClipPath: "inset(0 0 0 0 round 43px 43px 0 0)",
+                clipPath: `inset(0 0 0 0 round ${SCREEN_RADIUS}px ${SCREEN_RADIUS}px 0 0)`,
+                WebkitClipPath: `inset(0 0 0 0 round ${SCREEN_RADIUS}px ${SCREEN_RADIUS}px 0 0)`,
                 isolation: "isolate",
                 transform: "translateZ(0)",
                 willChange: "transform",

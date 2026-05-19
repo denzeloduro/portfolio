@@ -46,7 +46,7 @@ export default function Home() {
 
         {/* Bio */}
         <motion.p
-          className="text-[28px] md:text-[40px] text-foreground mt-[16px] md:mt-[24px] leading-snug"
+          className="text-[24px] md:text-[40px] text-foreground mt-[16px] md:mt-[24px] leading-snug"
           initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.0, delay: 0.4, ease }}
@@ -86,6 +86,7 @@ export default function Home() {
             tilt="left"
             hint={{ text: "tap search icon to search", icon: <SearchHintIcon />, position: "top" }}
             href="/projects/search-in-accounts-center"
+            background="radial-gradient(circle at 100% 100%, rgba(64,247,104,0.6), transparent 60%), radial-gradient(circle at 100% 0%, rgba(80,188,255,0.6), transparent 60%), radial-gradient(circle at 75% 100%, rgba(255,221,90,0.6), transparent 45%), radial-gradient(circle at 0% 95%, rgba(255,143,188,0.7), transparent 60%), radial-gradient(circle at 0% 40%, rgba(255,143,188,0.55), transparent 55%), radial-gradient(circle at 20% 0%, rgba(178,143,252,0.6), transparent 60%), #ffffff"
           >
             <AccountsCenterSearch />
           </ProjectCard>
@@ -94,6 +95,7 @@ export default function Home() {
             context="Meta, 2026"
             delay={0.15}
             href="/projects/login-on-instagram"
+            background="linear-gradient(to top right, #FFC838 0%, #FFC838 15%, #DC624B 57%, #C23D85 77%, #743CD7 100%)"
           >
             <InstagramPrototype />
           </ProjectCard>
@@ -101,11 +103,13 @@ export default function Home() {
 
         {/* Full-width project */}
         <ProjectCard
-          title="Account Recovery on Instagram"
+          title="Account Recovery across Meta"
           context="Meta, 2024"
           aspectRatio="wide"
           delay={0}
           tilt="left"
+          hideHint
+          background="linear-gradient(to right, #0022FF 0%, #3CB9EF 100%)"
         >
           <AccountRecoveryPrototype />
         </ProjectCard>
